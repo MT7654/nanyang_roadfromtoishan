@@ -86,10 +86,13 @@ function App() {
   const chapter = chapters[game.chapterIndex]
   const layers = sceneLayers[chapter.sceneId]
   const discoveredInChapter = game.discoveredHotspots[chapter.id] || []
+  const chapterArtifactFound =
+    !chapter.artifactId || game.collectedArtifacts.includes(chapter.artifactId)
   const chapterReadyForChoice =
     !!chapter.choice &&
     !game.chapterChoices[chapter.id] &&
-    discoveredInChapter.length >= 3
+    discoveredInChapter.length === chapter.hotspots.length &&
+    chapterArtifactFound
   const activeHotspot = chapter.hotspots.find(
     (item) => item.id === game.activeHotspotId,
   )
