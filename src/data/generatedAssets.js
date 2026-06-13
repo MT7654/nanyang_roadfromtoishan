@@ -1,0 +1,138 @@
+const assetBase = '/assets'
+
+export function getAssetUrl(key) {
+  return `${assetBase}/${assetMap[key]}`
+}
+
+const assetMap = {
+  title: 'title-background.png',
+  arrival: 'port-background.png',
+  clanHall: 'clan-hall-background.png',
+  worksite: 'kallang-worksite-background.png',
+  qiaopiHouse: 'qiaopi-house-background.png',
+  legacy: 'final-clan-hall-background.png',
+  liang: 'liang-sprite.png',
+  wong: 'wong-ah-fook-sprite.png',
+  elder: 'clan-elder-sprite.png',
+  secretEpilogue: 'secret-epilogue-landscape.png',
+  endingWealth: 'ending-wealth.png',
+  endingTrust: 'ending-trust.png',
+  endingLegacy: 'ending-legacy.png',
+  'migration-trunk': 'migration-trunk.png',
+  'clan-seal': 'clan-seal.png',
+  'carpenter-plane': 'carpenter-plane.png',
+  'qiaopi-letter': 'qiaopi-letter.png',
+}
+
+export const sceneLayers = {
+  arrival: [
+    {
+      id: 'arrival-back',
+      src: getAssetUrl('arrival'),
+      parallax: 0.35,
+      scale: 1.12,
+      grayscaleBase: 1,
+      saturateBoost: 0.9,
+      brightness: 0.88,
+      opacity: 0.65,
+    },
+    {
+      id: 'arrival-mid',
+      src: getAssetUrl('arrival'),
+      parallax: 0.7,
+      scale: 1.05,
+      grayscaleBase: 0.9,
+      saturateBoost: 1.1,
+      brightness: 0.98,
+      opacity: 0.9,
+    },
+  ],
+  clanHall: [
+    {
+      id: 'clan-back',
+      src: getAssetUrl('clanHall'),
+      parallax: 0.28,
+      scale: 1.08,
+      grayscaleBase: 0.85,
+      saturateBoost: 1.2,
+      brightness: 0.82,
+      opacity: 0.75,
+    },
+    {
+      id: 'clan-mid',
+      src: getAssetUrl('clanHall'),
+      parallax: 0.65,
+      scale: 1.02,
+      grayscaleBase: 0.7,
+      saturateBoost: 1.4,
+      brightness: 0.95,
+      opacity: 0.92,
+    },
+  ],
+  worksite: [
+    {
+      id: 'work-back',
+      src: getAssetUrl('worksite'),
+      parallax: 0.34,
+      scale: 1.12,
+      grayscaleBase: 0.75,
+      saturateBoost: 1.3,
+      brightness: 0.8,
+      opacity: 0.72,
+    },
+    {
+      id: 'work-mid',
+      src: getAssetUrl('worksite'),
+      parallax: 0.74,
+      scale: 1.03,
+      grayscaleBase: 0.6,
+      saturateBoost: 1.5,
+      brightness: 0.94,
+      opacity: 0.94,
+    },
+  ],
+  qiaopiHouse: [
+    {
+      id: 'qiaopi-back',
+      src: getAssetUrl('qiaopiHouse'),
+      parallax: 0.32,
+      scale: 1.09,
+      grayscaleBase: 0.55,
+      saturateBoost: 1.5,
+      brightness: 0.82,
+      opacity: 0.75,
+    },
+    {
+      id: 'qiaopi-mid',
+      src: getAssetUrl('qiaopiHouse'),
+      parallax: 0.68,
+      scale: 1.03,
+      grayscaleBase: 0.45,
+      saturateBoost: 1.7,
+      brightness: 0.96,
+      opacity: 0.92,
+    },
+  ],
+  legacy: [
+    {
+      id: 'legacy-back',
+      src: getAssetUrl('legacy'),
+      parallax: 0.3,
+      scale: 1.08,
+      grayscaleBase: 0,
+      saturateBoost: 1.9,
+      brightness: 0.9,
+      opacity: 0.8,
+    },
+    {
+      id: 'legacy-mid',
+      src: getAssetUrl('legacy'),
+      parallax: 0.64,
+      scale: 1.02,
+      grayscaleBase: 0,
+      saturateBoost: 2,
+      brightness: 1,
+      opacity: 0.94,
+    },
+  ],
+}
